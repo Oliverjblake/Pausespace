@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <title>PAUSESPACE – Forside</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Gå til indhold</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img 
+        src="img/pausespace-logo.png" 
+        alt="PAUSESPACE – dit digitale pauserum" 
+        class="logo-img">
+    </a>
+
+    <nav aria-label="Hovednavigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Åbn menu</span>
+      </button>
+      <ul id="main-menu" class="nav-list">
+        <li><a href="index.html" aria-current="page">Forside</a></li>
+        <li><a href="tips.html">Gode råd</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Et digitalt pusterum, når verden fylder for meget</h1>
+        <p>
+          Mange unge oplever pres, uro og forventninger i hverdagen.
+          <br> PAUSESPACE er et digitalt pauserum, hvor du kan finde små råd,
+          guide dig selv gennem korte pauser og få lidt mere overblik ,
+          uden at skulle læse lange artikler eller blive overvældet.
+        </p>
+        <p>
+          Her handler det om at tage tingene i eget tempo. Du skal ikke gøre alt perfekt,
+          <strong>små skridt tæller.</strong>
+        </p>
+        <a class="btn btn-primary" href="tips.html">Se gode råd</a>
+      </div>
+
+      <figure class="hero-media">
+        <img 
+          src="img/Paucespacekvinde.png" 
+          class="hero-img"
+          alt="Ung kvinde sidder afslappet og holder en pause.">
+        <figcaption>De små pauser i hverdagen kan gøre en stor forskel.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <h2>Hvad er PAUSESPACE?</h2>
+      <p>
+        PAUSESPACE er skabt til dig, der gerne vil passe lidt bedre på dig selv
+        i en hverdag, der kan føles hektisk. 
+        <br>Siden samler enkle råd og øvelser,
+        som er nemme at gå til, også når du er træt eller har meget om ørerne.
+      </p>
+
+      <ul class="simple-list">
+        <li>Korte råd om mental trivsel i hverdagen.</li>
+        <li>Små øvelser, der hjælper dig med at komme ned i tempo.</li>
+        <li>Forklaringer i et enkelt og forståeligt sprog.</li>
+      </ul>
+
+      <div class="grid-three">
+        <article class="info-card">
+          <h3>🧭 Let at finde rundt</h3>
+          <p>
+            PAUSESPACE giver dig et overskueligt overblik, så du hurtigt kan finde
+            de råd og værktøjer, du har brug for, uden at skulle lede længe eller
+            klikke dig gennem en masse sider.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>⚡ Korte og brugbare råd</h3>
+          <p>
+            Du får konkrete tips, som du kan tage i brug med det samme i din hverdag.
+            Ingen lange tekster, kun det vigtigste, så det er til at handle på.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>🧩 Alt samlet ét sted</h3>
+          <p>
+            I stedet for at hoppe mellem apps, videoer og artikler, finder du her
+            ét samlet sted med viden om søvn, digitale pauser, grænser og mental
+            trivsel, så du både sparer tid og får lidt mere klarhed.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2025 PAUSESPACE.</p>
+  </div>
+
+  <div class="footer-logos">
+  <a href="https://psykiatrifonden.dk/" target="_blank" rel="noopener">
+    <img src="img/psykiatrifonden.png" alt="Psykiatrifonden logo">
+  </a>
+
+  <a href="https://depressionsforeningen.dk/" target="_blank" rel="noopener">
+    <img src="img/depressionsforeningen.png" alt="Depressionsforeningen logo">
+  </a>
+
+  <a href="https://www.livslinien.dk/" target="_blank" rel="noopener">
+    <img src="img/livslinien.png" alt="Livslinien logo">
+  </a>
+</div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('main-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('nav-open');
+    });
+  }
+</script>
+
+</body>
+</html>
+
