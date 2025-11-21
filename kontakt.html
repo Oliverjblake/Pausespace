@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <title>PAUSESPACE – Kontakt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Gå til indhold</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img 
+        src="img/pausespace-logo.png" 
+        alt="PAUSESPACE – dit digitale pauserum" 
+        class="logo-img">
+    </a>
+
+    <nav aria-label="Hovednavigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="visually-hidden">Åbn menu</span>
+      </button>
+      <ul id="main-menu" class="nav-list">
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="tips.html">Gode råd</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="container narrow">
+      <h1>Kontakt PAUSESPACE</h1>
+      <p>
+        Har du forslag, spørgsmål eller noget, du gerne vil dele? Du er velkommen til at skrive
+        via formularen herunder. Vi svarer så hurtigt vi kan. Felter markeret med * er obligatoriske.
+      </p>
+
+      <form class="contact-form" aria-describedby="contact-help">
+        <div class="form-field">
+          <label for="name">Navn *</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+
+        <div class="form-field">
+          <label for="email">E-mail *</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+
+        <div class="form-field">
+          <label for="topic">Emne</label>
+          <select id="topic" name="topic">
+            <option value="">Vælg et emne (valgfrit)</option>
+            <option value="feedback">Feedback til PAUSESPACE</option>
+            <option value="ændringer">Forslag til ændringer på siden</option>
+            <option value="raad">Dit gode råd</option>
+            <option value="andet">Andet</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Besked *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <p id="contact-help" class="form-help">
+          Din besked bliver behandlet 100% fortroligt og deles ikke med andre.
+          Vi læser alle henvendelser med respekt og omtanke og vender tilbage så hurtigt som muligt.
+        </p>
+
+        <button type="submit" class="btn btn-primary">Send besked</button>
+      </form>
+
+      <div class="contact-info-box">
+        <p><strong>Email:</strong> <a href="mailto:kontakt@pausespace.dk">kontakt@pausespace.dk</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:+4591929394">+45 91 92 93 94</a></p>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p> 2025 PAUSESPACE.</p>
+  </div>
+  
+  <p class="footer-disclaimer">
+  <strong>Husk at søge professionel hjælp, hvis du oplever længerevarende pres, stress eller mistrivsel. 
+  <br>Tal med din læge, en fagperson eller en rådgivning, hvis du har brug for støtte.</strong>
+</p>
+
+
+  <div class="footer-logos">
+  <a href="https://psykiatrifonden.dk/" target="_blank" rel="noopener">
+    <img src="img/psykiatrifonden.png" alt="Psykiatrifonden logo">
+  </a>
+
+  <a href="https://depressionsforeningen.dk/" target="_blank" rel="noopener">
+    <img src="img/depressionsforeningen.png" alt="Depressionsforeningen logo">
+  </a>
+
+  <a href="https://www.livslinien.dk/" target="_blank" rel="noopener">
+    <img src="img/livslinien.png" alt="Livslinien logo">
+  </a>
+</div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('main-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('nav-open');
+    });
+  }
+</script>
+</body>
+</html>
